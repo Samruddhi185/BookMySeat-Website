@@ -93,53 +93,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     
     </h3>
   </header>
-  
-  
-  
-  
-  
-  <!-- ///////////////////////// SEAT GRAPHICS /////////////////////////////////// -->
-  <div>
-  <svg>
-  <rect width="30" height="60" 
- x="20" y="95" rx="5" ry="5" style="fill:#0066ff;stroke:grey;stroke-width:4;opacity:0.5" /> 
-
-  <rect width="30" height="60" 
- x="60" y="20" rx="5" ry="5" style="fill:#0066ff;stroke:grey;stroke-width:4;opacity:0.5" /> 
  
- <rect width="30" height="60" 
- x="60" y="95" rx="5" ry="5" style="fill:#0066ff;stroke:grey;stroke-width:4;opacity:0.5"/> 
- 
-   <rect width="30" height="60" 
- x="100" y="20" rx="5" ry="5" style="fill:#0066ff;stroke:grey;stroke-width:4;opacity:0.5 "/>
- 
-  <rect width="30" height="60" 
- x="140" y="20" rx="5" ry="5" style="fill:#0066ff;stroke:grey;stroke-width:4;opacity:0.5" />
- 
-  <rect width="30" height="60" 
- x="180" y="20" rx="5" ry="5" style="fill:#0066ff;stroke:grey;stroke-width:4;opacity:0.5" />
- 
-  <rect width="30" height="60" 
- x="220" y="20" rx="5" ry="5" style="fill:#0066ff;stroke:grey;stroke-width:4;opacity:0.5" />
- 
-  <rect width="30" height="60" 
- x="260" y="20" rx="5" ry="5" style="fill:#0066ff;stroke:grey;stroke-width:4;opacity:0.5 "/>
- 
-<rect width="30" height="60" 
- x="100" y="95" rx="5" ry="5" style="fill:#0066ff;stroke:grey;stroke-width:4;opacity:0.5 " /> 
- 
- <rect width="30" height="60" 
- x="260" y="95" rx="5" ry="5" style="fill:#0066ff;stroke:grey;stroke-width:4;opacity:0.5 "/> 
- 
- <rect width="30" height="60" 
- x="220" y="95" rx="5" ry="5" style="fill:#0066ff;stroke:grey;stroke-width:4;opacity:0.5 " /> 
- 
- <rect width="30" height="60" 
- x="180" y="95" rx="5" ry="5" style="fill:#0066ff;stroke:grey;stroke-width:4;opacity:0.5 " /> 
- </svg>
-</div>
-
-<!--///////////////////////////// SEAT GRAPHICS ENDS ////////////////////////-->
     
 
   <!-- INFO Section -->
