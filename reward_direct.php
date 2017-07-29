@@ -103,7 +103,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     
   </div>
   <div>
-      <form action="#abcde" method="POST" target="_blank">
+      <form action="#abcde" method="POST">
       <p><input class="w3-input w3-padding-16"  placeholder="Please enter your username." required name="usern">
       </p>
         <button class="w3-button w3-light-grey w3-padding-large" type="submit" name="submit8">

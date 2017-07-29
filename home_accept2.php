@@ -94,7 +94,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     
     <p>Please fill in to accept seat.</p>
 
-    <form action="server4.php" method="POST" target="_blank">
+    <form action="server4.php" method="POST">
           <p><label for="trainnos">Train number :<br></label>
       <select class="w3-input w3-padding-16" id="trainnos" required name="trainno">
            <option value="1">1</option>

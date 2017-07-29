@@ -103,7 +103,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     
   </div>
   <div>
-      <form action="#abcd" method="POST" target="_blank">
+      <form action="#abcd" method="POST">
       <?php include ('errors.php');?>
       <p><input class="w3-input w3-padding-16"  placeholder="Please enter your username to increment your reward points and then open reward page." required name="usern">
       </p>
