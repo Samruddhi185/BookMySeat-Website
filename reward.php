@@ -1,4 +1,4 @@
-<?php include 'server.php'; 
+<?php include 'server.php';
 if (empty($_SESSION['Name'])) {
   header('location: login.php');
 }
@@ -9,7 +9,7 @@ if (empty($_SESSION['Name'])) {
 $dbServername="localhost";
 $dbUsername="root";
 $dbPass="";
-$dbName="registration";
+$dbName="bms1";
  $db3 = mysqli_connect($dbServername, $dbUsername, $dbPass, $dbName);
  if (!$db3) {
    die("connection failed :" .mysql_error());
@@ -38,8 +38,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
-   <img src="pic.jpg" style="width:100%">
-  
+   <img src="pic1.jpg" style="width:100%">
+
   <a href="home_give.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>RELINQUISH SEAT</p>
@@ -63,7 +63,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </a>
   <?php endif ?>
 </nav>
-  
+
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
@@ -89,18 +89,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
     <h3><span class="w3-hide-small">
     Welcome,<i> user !</i>
-    
+
     </h3>
   </header>
 
-    
+
 
   <!-- INFO Section -->
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
     <h2 class="w3-text-light-grey">REWARD POINTS:</h2>
     <hr style="width:250px" class="w3-opacity">
 
-    
+
   </div>
   <div>
       <form action="#abcd" method="POST">
@@ -113,17 +113,17 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </p>
     </form>
 
-  
-  
+
+
    </div>
   <div>
 
-  
-  <?php 
+
+  <?php
  if (isset($_SESSION['Name'])): ?>
 
   <?php
-  
+
 $errors=array();
  if(isset($_POST['submit7']))
  {
@@ -131,7 +131,7 @@ $errors=array();
  {
  array_push( $errors, "Filling this field is mandatory.");
  }else
- { 
+ {
   $usern=mysqli_real_escape_string($db3, $_POST['usern']);
  }
 
@@ -149,14 +149,14 @@ $errors=array();
 
 
 
-   
+
   $result = mysqli_query($db3, $sql);
   if(mysqli_num_rows($result)== 1)
     {
-    
-	while ($row = mysqli_fetch_array($result)) 
+
+	while ($row = mysqli_fetch_array($result))
 	  {
-	
+
 $row["0"]=$row["0"]+1;
 
  	       $sql1= "UPDATE `users` SET `REWARD` = '$row[0]' WHERE `users`.`USERNAME` = '$usern'; ";
@@ -167,9 +167,9 @@ $row["0"]=$row["0"]+1;
  			  $result2 = mysqli_query($db3, $sql2);
  			    if(mysqli_num_rows($result2)== 1)
  			    {
- 			    	while ($row2 = mysqli_fetch_array($result2)) 
+ 			    	while ($row2 = mysqli_fetch_array($result2))
  			    	{
- 			    	
+
  			    			echo " YOUR REWARD POINTS ARE : ".$row2["0"];
 	    echo "<br>";
             header('location: home1.php');
@@ -177,23 +177,23 @@ $row["0"]=$row["0"]+1;
 
  			    }
 
- 			  
- 			  
+
+
 
 	//	echo " YOUR REWARD POINTS ARE : ".$row["0"];
 	 //   echo "<br>";
-   		
+
 	    echo "<br><br><h3></div>";
-	    
+
 	  }
-	 
+
     }
-   
-  else 
+
+  else
     {
 	echo "ENTERED USERNAME IS INCORRECT !";
     }
- 
+
 /* else
  {
  header("Location: home1.php");
@@ -207,15 +207,15 @@ $row["0"]=$row["0"]+1;
 //}
 }
 ?>
-  
+
   <?php endif ?>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
 </div>
 
  <!-- Footer -->
@@ -226,7 +226,7 @@ $row["0"]=$row["0"]+1;
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">VJTI-CoC-Inheritance</a></p>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">VJTI-Computer-Department</a></p>
   <!-- End footer -->
   </footer>
 

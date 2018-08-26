@@ -11,16 +11,31 @@
 </head>
 <body class="w3-black">
 <div class="header">
-<h2>Register</h2>   
+<h2>Register</h2>
 </div>
 
 <form method="post" action="register.php">
-<?php include ('errors.php');?>  
+<?php include ('errors.php');?>
     <div class="input">
     <label>Username</label><br>
     <input type="text" placeholder="Enter Username" name="username">
     </div>
-    
+
+    <div class="input">
+    <label>First-name</label><br>
+    <input type="text" placeholder="Enter first name." name="firstname">
+    </div>
+
+    <div class="input">
+    <label>Last-name</label><br>
+    <input type="text" placeholder="Enter last name." name="lastname">
+    </div>
+
+    <div class="input">
+    <label>Mobile</label><br>
+    <input type="text" placeholder="Enter phone number." name="mobile">
+    </div>
+
     <div class="input">
     <label>Email</label><br>
     <input type="text" placeholder="Enter email" name="email">

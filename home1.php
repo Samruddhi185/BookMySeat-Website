@@ -1,4 +1,4 @@
-<?php include 'server.php'; 
+<?php include 'server.php';
 if (empty($_SESSION['Name'])) {
 	header('location: login.php');
 }
@@ -28,8 +28,29 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
-  <img src="pic.jpg" style="width:100%">
+  <!--<?php
+  /*$db2 = mysqli_connect('localhost','root','','bms1');
+ if (!$db2) {
+   die("connection failed :" .mysql_error());
+ }
+  $id = $_SESSION['id_user'];
+  $sql9 = "SELECT * FROM `users` WHERE `user_id` = '$id'";
+ $result9 = mysqli_query($db2, $sql9);
+
+ if((mysqli_num_rows($result9)) > 0)
+ {
+
+   while($row9 = $result9->fetch_assoc()) {
+     $pro_pic=$row9["profile_pic"];
+}}
+echo $pro_pic;
+
+  */?>
+-->
+
   
+  <img src="pic1.jpg" style="width:100%">
+
   <a href="home_give.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>RELINQUISH SEAT</p>
@@ -42,7 +63,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa fa-eye w3-xxlarge"></i>
     <p>REWARD POINTS</p>
   </a>
- 
+
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
@@ -54,7 +75,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </a>
   <?php endif ?>
 </nav>
-  
+
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
@@ -80,13 +101,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
  <!--  <h3><span class="w3-hide-small">
     Welcome,
-    
+
     </h3> -->
     <h3 class="w3-jumbo"><a href="home.php"> BOOK MY SEAT </a></h3>
-<?php 
+<?php
  if (isset($_SESSION['Name'])): ?>
- 
-   <?php echo  $_SESSION['Name'] .  "  ,you have logged in successfully"; ?>
+
+   <?php echo  $_SESSION['Name'] .  " ,  you have logged in successfully !"; ?>
     <?php endif ?>
 </header>
 
@@ -103,15 +124,14 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 
     </p>
-    
 
-  <!-- Contact Section -->
+<!-- Contact Section -->
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
     <h2 class="w3-text-light-grey">Contact Us</h2>
     <hr style="width:200px" class="w3-opacity">
 
     <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> VJTI, Mumbai.</p>
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> VJTI, Mumbai</p>
       <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: railwebsite@mail.com</p>
     </div><br>
@@ -119,6 +139,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
     <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
       <p>
@@ -129,7 +150,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </form>
   <!-- End Contact Section -->
   </div>
-  
+ 
     <!-- Footer -->
   <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -139,7 +160,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
     <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">VJTI-CoC-Inheritance</a></p>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">VJTI-Computer-Department</a></p>
   <!-- End footer -->
   </footer>
 

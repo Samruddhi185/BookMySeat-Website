@@ -9,7 +9,7 @@ if (empty($_SESSION['Name'])) {
 $dbServername="localhost";
 $dbUsername="root";
 $dbPass="";
-$dbName="registration";
+$dbName="bms1";
  $db3 = mysqli_connect($dbServername, $dbUsername, $dbPass, $dbName);
  if (!$db3) {
    die("connection failed :" .mysql_error());
@@ -38,7 +38,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
-   <img src="pic.jpg" style="width:100%">
+   <img src="pic1.jpg" style="width:100%">
   
   <a href="home_give.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-envelope w3-xxlarge"></i>
@@ -103,111 +103,33 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     
   </div>
   <div>
-      <form action="#abcde" method="POST">
-      <p><input class="w3-input w3-padding-16"  placeholder="Please enter your username." required name="usern">
-      </p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit" name="submit8">
-          <i class="fa fa-paper-plane"></i> SUBMIT
-        </button>
-      </p>
-    </form>
+      
+     
+    <?php
+     $id = $_SESSION['id_user'];   
+      $sql7 = "SELECT * FROM `users` WHERE `user_id`='$id'";
+      $res7 = mysqli_query($db3, $sql7);
+      //$stn_id = 0;
+      if((mysqli_num_rows($res7)) > 0)
+      {
 
+        while($row7 = $res7->fetch_assoc()) {
+          $rpts=$row7["reward_pts"];
+     
+        }
+        }
+
+        echo "YOUR REWARD POINTS ARE: ".$rpts;
+
+
+
+
+    ?>
   
   
    </div>
   <div>
 
-  
-  <?php 
- if (isset($_SESSION['Name'])): ?>
-
-  <?php
-  
-  $errors1=array();
- if(isset($_POST['submit8']))
- {
- $usern=mysqli_real_escape_string($db3, $_POST['usern']);
-    if(empty($usern))
- {
- array_push( $errors, "Filling this field is mandatory.");
- }
-     if($usern!=$_SESSION['Name'])
- {
- array_push( $errors, "This is not your own username !");
- }
-
-
-  if(count($errors)==0)
- {
-
- 	       $sql= "SELECT REWARD FROM users WHERE `users`.`USERNAME` = '$usern'; ";
-
-
-
-   
-  $result = mysqli_query($db3, $sql);
-  if(mysqli_num_rows($result)== 1)
-    {
-    
-	while ($row = mysqli_fetch_array($result)) 
-	  {
-	
-//$row["0"]=$row["0"]+1;
-
- 	//       $sql1= "UPDATE `users` SET `REWARD` = '$row[0]' WHERE `users`.`USERNAME` = '$usern'; ";
- 	 //      mysqli_query($db3, $sql1);
- 	  //     $sql2= "SELECT REWARD FROM users WHERE `users`.`USERNAME` = '$usern'; ";
-
-
- 	//		  $result2 = mysqli_query($db3, $sql2);
- 			    if(mysqli_num_rows($result)== 1)
- 			//    {
- 			  //  	while ($row2 = mysqli_fetch_array($result2)) 
- 			    //	{
- 			    	
- 			    //			echo " YOUR REWARD POINTS ARE : ".$row2["0"];
-	  //  echo "<br>";
-
- 		//	    	}
-
- 		//	    }
-
- 			  
- 			  
-
-		echo " YOUR REWARD POINTS ARE : ".$row["0"];
-	    echo "<br>";
-   		
-	    echo "<br><br><h3></div>";
-	    
-	  }
-	 
-    }
-   
-  else 
-    {
-	echo "ENTERED USERNAME IS INCORRECT !";
-    }
- 
-/* else
- {
- header("Location: home1.php");
- exit();
- }*/
-//}
-}
-//else
-//{
-//echo " ENTERED USERNAME IS INCORRECT !";
-//}
-}
-?>
-  
-  <?php endif ?>
-  
-  
-  
-  
   
   
   
@@ -221,7 +143,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">VJTI-CoC-Inheritance</a></p>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">VJTI-Computer-Department</a></p>
   <!-- End footer -->
   </footer>
 
